@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Portal</title>
+
+    <!--Importing files and CDN's-->
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="sheet"></div>
+      <nav class="navbar">
+        <div class="website-logo">
+          <h1><a style="text-decoration: none; color: white;" href="index.html"><span style="color: rgb(249, 91, 91)">P</span>ayroll</a></h1>
+        </div>
+        <div class="nav-contents">
+          <ul class="list">
+            <li
+              class="list-items"
+              onclick="window.location.href = 'index.html'"
+            >
+              Logout
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section id="home">
+        <div class="window">
+          <h1 style="margin: 25px">
+            <span style="color: rgb(249, 91, 91)">Welcome,</span> Harish
+          </h1>
+          <div class="table-db">
+            <table class="db-table" style="text-align: center">
+              <tr class="table-row-head">
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Net Salary</th>
+                <th>Generate receipt</th>
+              </tr>
+              <tr>
+                <td class="table-data">1001</td>
+                <td class="table-data">Harish Ravikumar</td>
+                <td class="table-data">January</td>
+                <td class="table-data">2024</td>
+                <td class="table-data">12000</td>
+                <td class="table-data">
+                  <button class="generate-btn"><a style="text-decoration: none; color: white;" href="./salary_details.pdf" download="salary_details.pdf">Print</a></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-data">1001</td>
+                <td class="table-data">Harish Ravikumar</td>
+                <td class="table-data">February</td>
+                <td class="table-data">2024</td>
+                <td class="table-data">12000</td>
+                <td class="table-data">
+                  <button class="generate-btn"><a style="text-decoration: none; color: white;" href="./salary_details.pdf" download="salary_details.pdf">Print</a></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-data">1001</td>
+                <td class="table-data">Harish Ravikumar</td>
+                <td class="table-data">March</td>
+                <td class="table-data">2024</td>
+                <td class="table-data">12000</td>
+                <td class="table-data">
+                  <button class="generate-btn"><a style="text-decoration: none; color: white;" href="./salary_details.pdf" download="salary_details.pdf">Print</a></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

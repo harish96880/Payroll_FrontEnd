@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solartis Payroll</title>
+
+    <!--Importing files and CDN's-->
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="sheet"></div>
+      <nav class="navbar">
+        <div class="website-logo">
+          <h1><a style="text-decoration: none; color: white;" href="index.html"><span style="color: rgb(249, 91, 91)">P</span>ayroll</a></h1>
+        </div>
+        <div class="nav-contents">
+          <ul class="list">
+            <li class="list-items">About us</li>
+            <li class="list-items" onclick=adminLoginCard()>Login</li>
+          </ul>
+        </div>
+      </nav>
+      <section id="home">
+        <div class="center-card" id="center-card-employee">
+          <div class="center-card-logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-x-circle"
+              id="center-card-employee-close-btn"
+              viewBox="0 0 16 16"
+              onclick=closeEmployeeCard()
+              style="cursor: pointer;"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+              />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </div>
+          <div class="input-form">
+            <form action="javascript:void(0)" id="myForm">
+              <center><h1>Employee Login</h1></center><br>
+              <input
+                type="number"
+                class="input-field"
+                placeholder="Employee ID"
+                id="employeeId"
+                required
+              /></br>
+              <input
+                type="email"
+                class="input-field"
+                placeholder="Email address"
+                name=""
+                id="employeeEmail"
+                required
+              /></br>
+              <input type="submit" onclick=validateEmployee() class="center-card-btn" value="Login" />
+            </form>
+          </div>
+        </div>
+        <div class="center-card" id="center-card-admin">
+          <div class="center-card-logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-x-circle"
+              id="center-card-admin-close-btn"
+              viewBox="0 0 16 16"
+              onclick=closeAdminCard()
+              style="cursor: pointer;"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+              />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </div>
+          <div class="input-form">
+            <form action="javascript:void(0)">
+              <center><h1>Admin Login</h1></center><br>
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Admin Name"
+                id="adminName"
+                required
+              /></br>
+              <input
+                type="number"
+                class="input-field"
+                placeholder="Secret key"
+                name=""
+                id="adminId"
+                required
+              /></br>
+              <input type="button" onclick=validateAdmin() style="background-color: rgb(54, 143, 215); cursor: pointer;" class="center-card-btn" value="Login" />
+            </form>
+          </div>
+        </div>
+        <div class="card-group">
+          <div class="card">
+            <p>
+              <span class="quote-style">" </span>Login as employee to see your
+              monthy salary details
+            </p>
+            <button class="home-login-btn" id="employee-login-btn" onclick=employeeLoginCard()>Employee</button>
+          </div>
+          <div class="card">
+            <p>
+              <span class="quote-style">" </span>Login as admin to generate the
+              employee's monthy salary slip
+            </p>
+            <button
+              class="home-login-btn"
+              onclick=adminLoginCard()
+              style="background-color: rgb(54, 143, 215)"
+            >
+              Admin
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
